@@ -5,13 +5,13 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "6.5.1"
+  version "6.6"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/6.5.1/mark_6.5.1_Darwin_x86_64.tar.gz"
-      sha256 "cabcc61fa5e3c50c7cac8445f50ae68754b99954b4c81ee2fd5c7dc8831f917b"
+      url "https://github.com/kovetskiy/mark/releases/download/6.6/mark_6.6_Darwin_x86_64.tar.gz"
+      sha256 "471199d47bd5ca07c77489c990f2008a58ab5c9ae18ca532dd85cd73c9e40c56"
 
       def install
         bin.install "mark"
@@ -21,16 +21,16 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/6.5.1/mark_6.5.1_Linux_arm64.tar.gz"
-      sha256 "6e7563a2353e846ab8bacef8fdb57339541955b9f898cf8f49ddb2d8b2721975"
+      url "https://github.com/kovetskiy/mark/releases/download/6.6/mark_6.6_Linux_arm64.tar.gz"
+      sha256 "2a9a9d8cecfffa66a1841d645a4a21414da3c066bdde4ca3c3cf06f62817b89a"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/6.5.1/mark_6.5.1_Linux_x86_64.tar.gz"
-      sha256 "4534b349c9bdef1f54cdc6a6a77a7e5a1222b644e6dd550cbe9433078f91ecc4"
+      url "https://github.com/kovetskiy/mark/releases/download/6.6/mark_6.6_Linux_x86_64.tar.gz"
+      sha256 "f34a32406f71d9ac239eadc1f0fd9d9294042db9fd13a3fa129ba20400dd6d5b"
 
       def install
         bin.install "mark"
