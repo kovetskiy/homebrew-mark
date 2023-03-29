@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "9.0"
+  version "9.0.1"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0/mark_9.0_Darwin_x86_64.tar.gz"
-      sha256 "93204820f6bbbe2db14ca7e42aeefe044c89729eb8d36afc8454714894d11ca5"
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.1/mark_9.0.1_Darwin_x86_64.tar.gz"
+      sha256 "ee4781e04b8a1b13953f6b2de8ee945cd2df51f10d0bf1d23e1c122d8d974aec"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0/mark_9.0_Darwin_arm64.tar.gz"
-      sha256 "c99523a131256c223654d597afc74b4367b41e31e2789d5dea44c748a4501d5f"
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.1/mark_9.0.1_Darwin_arm64.tar.gz"
+      sha256 "cc0a1bdeaab540d4342b0524b17e481025c0be536176f80faa27ff112703ead1"
 
       def install
         bin.install "mark"
@@ -28,17 +28,17 @@ class Mark < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0/mark_9.0_Linux_x86_64.tar.gz"
-      sha256 "f9adc96c05f9d10dd217fd222fe9f1781d782f5ea0f2be2f839a0d338b53023c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.1/mark_9.0.1_Linux_arm64.tar.gz"
+      sha256 "a8ad2df72ee6537018984e2b2e908cdfdc021dcd478fc1446c884f513dcca7c8"
 
       def install
         bin.install "mark"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0/mark_9.0_Linux_arm64.tar.gz"
-      sha256 "dffbc0231f385c3ba63aac093ab636749074388f679f8f6fcfac8c2d2089f26e"
+    if Hardware::CPU.intel?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.1/mark_9.0.1_Linux_x86_64.tar.gz"
+      sha256 "4768226924054902cd522b009101fb2cb5146b2d7613a437dbc9f4ae987c5f6d"
 
       def install
         bin.install "mark"
