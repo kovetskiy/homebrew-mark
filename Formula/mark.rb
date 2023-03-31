@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "9.0.2"
+  version "9.0.3"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0.2/mark_9.0.2_Darwin_arm64.tar.gz"
-      sha256 "d44b45c351a550331a91a24aaedb60be0da5bf8483351622bc5937b47a22b819"
+    if Hardware::CPU.intel?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.3/mark_9.0.3_Darwin_x86_64.tar.gz"
+      sha256 "8c9480bd253001b7bcd6253d4e9767548d3b37bc1af67a2c0369291f4a47f9d0"
 
       def install
         bin.install "mark"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0.2/mark_9.0.2_Darwin_x86_64.tar.gz"
-      sha256 "39d1362e06c3d9c8825e03a2647cdfdcbff4a62392716eec3dd397c6a6d46d63"
+    if Hardware::CPU.arm?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.3/mark_9.0.3_Darwin_arm64.tar.gz"
+      sha256 "a38bc1da6b25459ef1cd0b173f29d56bf49307f47a173cf85376024c3f92974b"
 
       def install
         bin.install "mark"
@@ -28,17 +28,17 @@ class Mark < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0.2/mark_9.0.2_Linux_arm64.tar.gz"
-      sha256 "c4000ab0ef146ca7296a965fd5d9f1c1c25e93b9a0ad409feb7a531c6f9e12cc"
+    if Hardware::CPU.intel?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.3/mark_9.0.3_Linux_x86_64.tar.gz"
+      sha256 "38ea5899ba19b946704838ac0ec97be2e490ff1aa13cb503bf92d19c38e71e83"
 
       def install
         bin.install "mark"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.0.2/mark_9.0.2_Linux_x86_64.tar.gz"
-      sha256 "0726e9a4a4adef783c28dc40d160065ba4e1133f7bcdffd2e57ac8825c6f1862"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kovetskiy/mark/releases/download/9.0.3/mark_9.0.3_Linux_arm64.tar.gz"
+      sha256 "0e9d734acf725b1739643056a2d268caac918222512fcab3ce9292d5733a9a71"
 
       def install
         bin.install "mark"
