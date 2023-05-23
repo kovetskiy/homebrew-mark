@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "9.5.1"
+  version "9.5.2"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/9.5.1/mark_9.5.1_Darwin_arm64.tar.gz"
-      sha256 "9f17ff0a1dac2ff596ab9b9a5d8a03e7a438f9680dee956521526d19ce4e93c7"
+      url "https://github.com/kovetskiy/mark/releases/download/9.5.2/mark_9.5.2_Darwin_arm64.tar.gz"
+      sha256 "3e20b7c9640b6542a9c6abd6b2494da5b51d78960b18d04a518001fddfd26318"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.5.1/mark_9.5.1_Darwin_x86_64.tar.gz"
-      sha256 "1b26fd8b299c97cade17201fd4197abadaf0646d0b7c6702cde208288080d7c7"
+      url "https://github.com/kovetskiy/mark/releases/download/9.5.2/mark_9.5.2_Darwin_x86_64.tar.gz"
+      sha256 "bed0a2a924648f3022b08b97b0a2364d23e4b378150f4c82c027673d37e2150c"
 
       def install
         bin.install "mark"
@@ -29,16 +29,16 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/9.5.1/mark_9.5.1_Linux_arm64.tar.gz"
-      sha256 "ba9b3facd0c2edc699b6deab485cb249e7e75c54f530d992cde16bf49d7f1fc1"
+      url "https://github.com/kovetskiy/mark/releases/download/9.5.2/mark_9.5.2_Linux_arm64.tar.gz"
+      sha256 "0891e0bd75079cf3522f48f38682d036be9acc2cc0a962030b5a05a07cb68521"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.5.1/mark_9.5.1_Linux_x86_64.tar.gz"
-      sha256 "db3b55fb9bf6be824206ed00e4753e79aa5d67b0abaf9d1f0438ac12d88bd571"
+      url "https://github.com/kovetskiy/mark/releases/download/9.5.2/mark_9.5.2_Linux_x86_64.tar.gz"
+      sha256 "3b2c5e9cb1b2db5967d3d01a15b4f44f3b1a2c9a9aa6692f36b208dcd94c6708"
 
       def install
         bin.install "mark"
