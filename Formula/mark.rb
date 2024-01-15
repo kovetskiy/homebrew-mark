@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "9.11.0"
+  version "9.11.1"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/9.11.0/mark_Darwin_arm64.tar.gz"
-      sha256 "53150190de1be56ab8101e904cebee1daf471d4d7f2ed9dc267ac067f24ceec4"
+      url "https://github.com/kovetskiy/mark/releases/download/9.11.1/mark_Darwin_arm64.tar.gz"
+      sha256 "c745e368c4420e1a596c335f386e141e34f6197d574eb37c6c19db0e54c29a3e"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.11.0/mark_Darwin_x86_64.tar.gz"
-      sha256 "ef38c6c956ca44e751b8442806f80ffd95746cd706a827e0441ba737064df131"
+      url "https://github.com/kovetskiy/mark/releases/download/9.11.1/mark_Darwin_x86_64.tar.gz"
+      sha256 "fe363c639f003337a09ff875f906a9a67f866ab05a91685691c91cb7914a924e"
 
       def install
         bin.install "mark"
@@ -29,16 +29,16 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/9.11.0/mark_Linux_arm64.tar.gz"
-      sha256 "1a2a15a93ab21b99e7085cb46c495bf8a86b12a6cc444d88b1b270d834807139"
+      url "https://github.com/kovetskiy/mark/releases/download/9.11.1/mark_Linux_arm64.tar.gz"
+      sha256 "f84ac5dc94e9a9ddb97855d08762febf575477623ad61277e6ca9fc800ee0fbe"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/9.11.0/mark_Linux_x86_64.tar.gz"
-      sha256 "439c0e19680ff7c6604b5829f040acd0b0b64fe4c4312b112da37359012de8e6"
+      url "https://github.com/kovetskiy/mark/releases/download/9.11.1/mark_Linux_x86_64.tar.gz"
+      sha256 "be4f780af872652a99b40af2281a3a791472767b1805e823565170fa14b84124"
 
       def install
         bin.install "mark"
