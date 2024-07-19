@@ -11,7 +11,7 @@ class Mark < Formula
   on_macos do
     on_intel do
       url "https://github.com/kovetskiy/mark/releases/download/9.13.0/mark_Darwin_x86_64.tar.gz"
-      sha256 "56f579380031515707395dd3f461e94ac397111b8be3454f823bfd6ef72c1a91"
+      sha256 "2a666bee31e01909754ffb6d46cdb7b0b795e8a887f73c3df940d7f04b2b5a2c"
 
       def install
         bin.install "mark"
@@ -19,7 +19,7 @@ class Mark < Formula
     end
     on_arm do
       url "https://github.com/kovetskiy/mark/releases/download/9.13.0/mark_Darwin_arm64.tar.gz"
-      sha256 "7afdcc3dd5b42abcf86d25bf0556f6c3cd92266226a0c6d5fcb152c593b426a9"
+      sha256 "3e3ac8397e33baa72604ed4ba806a84adce4581b6b61e77c6e59d4b0c221bbcb"
 
       def install
         bin.install "mark"
@@ -31,7 +31,7 @@ class Mark < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kovetskiy/mark/releases/download/9.13.0/mark_Linux_x86_64.tar.gz"
-        sha256 "687d5a5cddd483d7d7a4aa4d9ba3aaa0c533fff397944957064c674b52ea4bde"
+        sha256 "dfe0104259b60979209b059a580a06fc9c334fceec1d4c32c450066be9f39adf"
 
         def install
           bin.install "mark"
@@ -41,7 +41,7 @@ class Mark < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kovetskiy/mark/releases/download/9.13.0/mark_Linux_arm64.tar.gz"
-        sha256 "810f1395d3ce4411f3d4604b95d5278526ceeaab4bb8adc5737c31403bbf7df2"
+        sha256 "5762867c35ecd30083f6156195284d353e07875e8a317bcab2247c99575e37d6"
 
         def install
           bin.install "mark"
