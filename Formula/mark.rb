@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "13.0.0"
+  version "14.0.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/13.0.0/mark_Darwin_x86_64.tar.gz"
-      sha256 "49c81597c3623684b14ffb10491a73683659d1f6bd38dd9d217ffd80928d85fc"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Darwin_x86_64.tar.gz"
+      sha256 "dced02dfeea9f48f95a60501c6562243748bc91ac3c0e2ba4fe6c8ecb27d5697"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/13.0.0/mark_Darwin_arm64.tar.gz"
-      sha256 "91ab2de9959ff376ae2a1549e291b486ef8e20119899d813277526ee9be878a1"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Darwin_arm64.tar.gz"
+      sha256 "3701f6913f894a17dcc4510297f9687436a42673671ea6873921f59faa984aec"
 
       def install
         bin.install "mark"
@@ -29,15 +29,15 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/13.0.0/mark_Linux_x86_64.tar.gz"
-      sha256 "d00444958860da17bb031ea8b061437c76208fa6e36c427263a32945f9893e37"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Linux_x86_64.tar.gz"
+      sha256 "eb384249777ad76732cd639a120a42e44ef0e8db2114a271def42b196d93d753"
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/13.0.0/mark_Linux_arm64.tar.gz"
-      sha256 "ff9c5567dfd2ee000eb70f19179ab7dd767d5f52dac603fed5b2e1349c8072b5"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Linux_arm64.tar.gz"
+      sha256 "e497b2fc394e17bd26f7e47a20f8813df0647b0882ff8b27973df57624cb97a9"
       def install
         bin.install "mark"
       end
