@@ -5,21 +5,21 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "14.0.0"
+  version "14.0.1"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Darwin_x86_64.tar.gz"
-      sha256 "dced02dfeea9f48f95a60501c6562243748bc91ac3c0e2ba4fe6c8ecb27d5697"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.1/mark_Darwin_x86_64.tar.gz"
+      sha256 "b3d4f3361b7457a444d20edc282dceee739376b06a19d8d53e325daa27192dd1"
 
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Darwin_arm64.tar.gz"
-      sha256 "3701f6913f894a17dcc4510297f9687436a42673671ea6873921f59faa984aec"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.1/mark_Darwin_arm64.tar.gz"
+      sha256 "edc13be4678185cf2af7666bc1a218305fb656c7065c6467fcd4d96f097549f3"
 
       def install
         bin.install "mark"
@@ -29,15 +29,15 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Linux_x86_64.tar.gz"
-      sha256 "eb384249777ad76732cd639a120a42e44ef0e8db2114a271def42b196d93d753"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.1/mark_Linux_x86_64.tar.gz"
+      sha256 "7e1551e1e05b1e0597121c03ce5e6ecc779714a21f44073de89ceb129a5e43b0"
       def install
         bin.install "mark"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/14.0.0/mark_Linux_arm64.tar.gz"
-      sha256 "e497b2fc394e17bd26f7e47a20f8813df0647b0882ff8b27973df57624cb97a9"
+      url "https://github.com/kovetskiy/mark/releases/download/14.0.1/mark_Linux_arm64.tar.gz"
+      sha256 "dc38854037e84c2bf2328f4c40e7489f22064599e22a24c886ece36a4825bafa"
       def install
         bin.install "mark"
       end
