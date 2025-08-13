@@ -5,13 +5,13 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "14.1.1"
+  version "14.1.2"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/14.1.1/mark_Darwin_x86_64.tar.gz"
-      sha256 "b95d84018dd765854a05bc4cdd9a2e31d1cb93584ef081ffe60969ee629841f1"
+      url "https://github.com/kovetskiy/mark/releases/download/v14.1.2/mark_Darwin_x86_64.tar.gz"
+      sha256 "54d72d80aba6de8d327a78fee19818ef88da992b97bd613f62ad455407b8c539"
 
       def install
         bin.install "mark"
@@ -19,8 +19,8 @@ class Mark < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/14.1.1/mark_Darwin_arm64.tar.gz"
-      sha256 "41d462036266779f80f6f3665046ee96fd96f763b67395d2a680b63f6484c6e0"
+      url "https://github.com/kovetskiy/mark/releases/download/v14.1.2/mark_Darwin_arm64.tar.gz"
+      sha256 "8e0a0bd4f39901d9b68a242bd48949b7b13fbeb6ef9663287f128628cc509fd1"
 
       def install
         bin.install "mark"
@@ -31,16 +31,16 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/14.1.1/mark_Linux_x86_64.tar.gz"
-      sha256 "6d26864876fe1df5c0970dad3594ed32ae4c46b7b2f4a6bdfc668ba7d89b748c"
+      url "https://github.com/kovetskiy/mark/releases/download/v14.1.2/mark_Linux_x86_64.tar.gz"
+      sha256 "10f43a40f65e2b9758ad3a969a5b9c58e44d38e6e93671b5bb0c658b7c50f3c2"
       def install
         bin.install "mark"
         generate_completions_from_executable(bin/"mark", "completion")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/14.1.1/mark_Linux_arm64.tar.gz"
-      sha256 "395675230c90a55c3954bfd61f5c911b97807c0161ad54661ee57c8660669258"
+      url "https://github.com/kovetskiy/mark/releases/download/v14.1.2/mark_Linux_arm64.tar.gz"
+      sha256 "f712320df2a5f43144be3dd394b6443ce7e8ac9a22c7b72b85a0e73b7860c5ae"
       def install
         bin.install "mark"
         generate_completions_from_executable(bin/"mark", "completion")
