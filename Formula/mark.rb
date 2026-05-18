@@ -5,13 +5,13 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages."
   homepage "https://github.com/kovetskiy/mark"
-  version "16.3.0"
+  version "16.4.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kovetskiy/mark/releases/download/v16.3.0/mark_Darwin_x86_64.tar.gz"
-      sha256 "d002e9c0608784f5aca8a16735b1bf5e67be78b6d4cab2b002fa66c9a30c4b83"
+      url "https://github.com/kovetskiy/mark/releases/download/v16.4.0/mark_Darwin_x86_64.tar.gz"
+      sha256 "5c62a03d61cf4ce1be94c1d49b7d60e257a9d7b23427b3b12d998521bf398ee5"
 
       define_method(:install) do
         bin.install "mark"
@@ -19,8 +19,8 @@ class Mark < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kovetskiy/mark/releases/download/v16.3.0/mark_Darwin_arm64.tar.gz"
-      sha256 "1a6c92fe915663654995dd482c3a8c7dbcb00d74d8a6fb24695961c02fe99ba0"
+      url "https://github.com/kovetskiy/mark/releases/download/v16.4.0/mark_Darwin_arm64.tar.gz"
+      sha256 "1da4e1962df93a0fa4e2862c81a26d4d5e3c1e6acac29e27bff6ab594778d307"
 
       define_method(:install) do
         bin.install "mark"
@@ -31,16 +31,16 @@ class Mark < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/v16.3.0/mark_Linux_x86_64.tar.gz"
-      sha256 "a2adf19d55143c457cc75cb56c64d0c54ebb04be5fcffc1cb93df18d6a30ba42"
+      url "https://github.com/kovetskiy/mark/releases/download/v16.4.0/mark_Linux_x86_64.tar.gz"
+      sha256 "e66a99199006ad3e2011d15f53aa903d75a865c8c6298eaa7ccb793109a6f191"
       define_method(:install) do
         bin.install "mark"
         generate_completions_from_executable(bin/"mark", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kovetskiy/mark/releases/download/v16.3.0/mark_Linux_arm64.tar.gz"
-      sha256 "a3398f028093d1c0816ba8a5a5721fface1dee06246b514d2884c2559acdff74"
+      url "https://github.com/kovetskiy/mark/releases/download/v16.4.0/mark_Linux_arm64.tar.gz"
+      sha256 "ad8af8896e9a76b8ae73d8981c556087eeba534f1381802c71963d93f4e9e5c0"
       define_method(:install) do
         bin.install "mark"
         generate_completions_from_executable(bin/"mark", "completion")
